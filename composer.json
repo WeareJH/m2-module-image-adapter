@@ -1,0 +1,19 @@
+{
+  "name": "wearejh/m2-module-image-adapter",
+  "description": "Mock image adapter for Magento 2",
+  "require": {
+    "php": "~7.0.0"
+  },
+  "scripts": {
+    "lint": "docker run --rm --volume=\"$(pwd):/mnt\" wearejh/php-coding-standards:latest",
+    "fix": "docker run --rm --volume=\"$(pwd):/mnt\" wearejh/php-coding-standards:latest phpcbf -s /mnt --standard=/etc/coding-standard/Jh"
+  },
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Jh\\ImageAdapter\\": ""
+    }
+  }
+}
